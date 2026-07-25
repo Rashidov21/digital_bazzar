@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Өзгөн базары — Hansoft</title>
+  <link rel="preload" as="image" href="assets/images/hero-market.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/fullpage.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
-  <link rel="preload" as="image" href="assets/images/hero-market.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -70,38 +70,38 @@
 
     <!-- SECTION 2: VISION -->
     <section class="section section--cream fp-section" data-anchor="vision">
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="vision-panel">
-          <div class="section__text section__text--compact">
+      <div class="section__inner">
+        <div class="vision-top section__inner--split">
+          <div class="section__text">
             <h2 class="section__title reveal reveal-up" data-lang="vision_title"></h2>
-            <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="vision_subtitle"></p>
+            <p class="section__desc reveal reveal-up" data-lang="vision_subtitle"></p>
           </div>
-          <div class="vision-grid stagger-children reveal">
-            <div class="vision-card glass-card">
-              <div class="vision-card__icon">
-                <img src="assets/icons/vision-org.svg" alt="" width="40" height="40">
-              </div>
-              <h3 data-lang="vision_org"></h3>
-              <p data-lang="vision_org_desc"></p>
-            </div>
-            <div class="vision-card glass-card">
-              <div class="vision-card__icon">
-                <img src="assets/icons/vision-comfort.svg" alt="" width="40" height="40">
-              </div>
-              <h3 data-lang="vision_comfort"></h3>
-              <p data-lang="vision_comfort_desc"></p>
-            </div>
-            <div class="vision-card glass-card">
-              <div class="vision-card__icon">
-                <img src="assets/icons/vision-growth.svg" alt="" width="40" height="40">
-              </div>
-              <h3 data-lang="vision_growth"></h3>
-              <p data-lang="vision_growth_desc"></p>
-            </div>
+          <div class="section-visual reveal scale-in">
+            <img src="assets/images/vision.webp" alt="" class="section-visual__img" width="1280" height="720" loading="lazy" decoding="async">
           </div>
         </div>
-        <div class="section-visual reveal scale-in">
-          <img src="assets/images/vision.webp" alt="" class="section-visual__img" width="1280" height="720" loading="lazy" decoding="async">
+        <div class="vision-grid stagger-children reveal">
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-org.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_org"></h3>
+            <p data-lang="vision_org_desc"></p>
+          </div>
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-comfort.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_comfort"></h3>
+            <p data-lang="vision_comfort_desc"></p>
+          </div>
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-growth.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_growth"></h3>
+            <p data-lang="vision_growth_desc"></p>
+          </div>
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--light">
@@ -112,10 +112,13 @@
 
     <!-- SECTION 3: TRUST / WHY HANSOFT -->
     <section class="section section--white fp-section" data-anchor="trust">
-      <div class="section__inner section__inner--fit">
-        <div class="section__text section__text--center section__text--compact">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
           <h2 class="section__title reveal reveal-up" data-lang="trust_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="trust_subtitle"></p>
+        </div>
+        <div class="section-visual section-visual--banner reveal scale-in">
+          <img src="assets/images/trust.webp" alt="" class="section-visual__img section-visual__img--banner" width="852" height="480" loading="lazy" decoding="async">
         </div>
         <div class="trust-grid stagger-children reveal">
           <div class="trust-card glass-card">
@@ -153,8 +156,8 @@
 
     <!-- SECTION 4: ECOSYSTEM -->
     <section class="section section--white fp-section" data-anchor="ecosystem">
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="section__text section__text--compact">
+      <div class="section__inner section__inner--split">
+        <div class="section__text">
           <h2 class="section__title reveal reveal-up" data-lang="ecosystem_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="ecosystem_subtitle"></p>
           <ul class="eco-products reveal reveal-up">
@@ -177,11 +180,11 @@
 
     <!-- SECTION 5: SHOPS -->
     <section class="section section--cream fp-section" data-anchor="shops">
-      <div class="section__inner section__inner--split section__inner--fit">
+      <div class="section__inner section__inner--split">
         <div class="shops-panel">
-          <div class="section__text section__text--compact">
+          <div class="section__text">
             <h2 class="section__title reveal reveal-up" data-lang="shops_title"></h2>
-            <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="shops_subtitle"></p>
+            <p class="section__desc reveal reveal-up" data-lang="shops_subtitle"></p>
           </div>
           <div class="shops-grid stagger-children reveal">
           <div class="shop-card glass-card">
@@ -228,8 +231,8 @@
 
     <!-- SECTION 6: CONTROL (dark) -->
     <section class="section section--dark fp-section" data-anchor="control">
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="section__text section__text--light section__text--compact">
+      <div class="section__inner section__inner--split">
+        <div class="section__text section__text--light">
           <h2 class="section__title reveal reveal-up" data-lang="control_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="control_subtitle"></p>
           <p class="control-disclaimer reveal reveal-up" data-lang="control_disclaimer"></p>
@@ -247,10 +250,10 @@
       </div>
     </section>
 
-    <!-- SECTION 7: PARKING -->
+    <!-- SECTION 6: PARKING -->
     <section class="section section--white fp-section" data-anchor="parking">
-      <div class="section__inner section__inner--split section__inner--reverse section__inner--fit">
-        <div class="section__text section__text--compact">
+      <div class="section__inner section__inner--split section__inner--reverse">
+        <div class="section__text">
           <h2 class="section__title reveal reveal-up" data-lang="parking_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="parking_subtitle"></p>
           <div class="feature-list stagger-children reveal">
@@ -287,18 +290,17 @@
       </div>
     </section>
 
-    <!-- SECTION 8: SECURITY (dark) -->
+    <!-- SECTION 7: SECURITY (dark) -->
     <section class="section section--dark fp-section" data-anchor="security">
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="security-panel">
-          <div class="section__text section__text--light section__text--compact">
-            <h2 class="section__title reveal reveal-up" data-lang="security_title"></h2>
-            <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="security_subtitle"></p>
-          </div>
-          <div class="security-grid stagger-children reveal">
+      <div class="section__inner">
+        <div class="section__text section__text--center section__text--light">
+          <h2 class="section__title reveal reveal-up" data-lang="security_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="security_subtitle"></p>
+        </div>
+        <div class="security-grid stagger-children reveal">
           <div class="security-card">
             <div class="security-card__icon">
-              <img src="assets/icons/security-camera.svg" alt="" width="40" height="40">
+              <img src="assets/icons/security-camera.svg" alt="" width="48" height="48">
             </div>
             <h3 data-lang="security_camera"></h3>
             <p data-lang="security_camera_desc"></p>
@@ -306,18 +308,17 @@
           </div>
           <div class="security-card">
             <div class="security-card__icon">
-              <img src="assets/icons/security-alert.svg" alt="" width="40" height="40">
+              <img src="assets/icons/security-alert.svg" alt="" width="48" height="48">
             </div>
             <h3 data-lang="security_alert"></h3>
             <p data-lang="security_alert_desc"></p>
           </div>
           <div class="security-card">
             <div class="security-card__icon">
-              <img src="assets/icons/security-shield.svg" alt="" width="40" height="40">
+              <img src="assets/icons/security-shield.svg" alt="" width="48" height="48">
             </div>
             <h3 data-lang="security_safe"></h3>
             <p data-lang="security_safe_desc"></p>
-          </div>
           </div>
         </div>
         <div class="security-visual reveal scale-in">
@@ -330,10 +331,10 @@
       </div>
     </section>
 
-    <!-- SECTION 9: NAVIGATION -->
+    <!-- SECTION 8: NAVIGATION -->
     <section class="section section--white fp-section" data-anchor="navigation">
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="section__text section__text--compact">
+      <div class="section__inner section__inner--split">
+        <div class="section__text">
           <h2 class="section__title reveal reveal-up" data-lang="navigation_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="navigation_subtitle"></p>
         </div>
@@ -347,10 +348,10 @@
       </div>
     </section>
 
-    <!-- SECTION 10: ADVERTISING -->
+    <!-- SECTION 9: ADVERTISING -->
     <section class="section section--cream fp-section" data-anchor="advertising">
-      <div class="section__inner section__inner--split section__inner--reverse section__inner--fit">
-        <div class="section__text section__text--compact">
+      <div class="section__inner section__inner--split section__inner--reverse">
+        <div class="section__text">
           <h2 class="section__title reveal reveal-up" data-lang="advertising_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="advertising_subtitle"></p>
           <div class="feature-list stagger-children reveal">
@@ -383,10 +384,10 @@
       </div>
     </section>
 
-    <!-- SECTION 11: TOURISTS -->
+    <!-- SECTION 10: TOURISTS -->
     <section class="section section--white fp-section" data-anchor="tourists">
-      <div class="section__inner section__inner--fit">
-        <div class="section__text section__text--center section__text--compact">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
           <h2 class="section__title reveal reveal-up" data-lang="tourists_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="tourists_subtitle"></p>
         </div>
@@ -416,34 +417,32 @@
 
     <!-- SECTION 12: INVESTMENT -->
     <section class="section section--cream fp-section" data-anchor="investment">
-      <div class="section__inner section__inner--fit investment-layout">
-        <div class="section__text section__text--center section__text--compact">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
           <h2 class="section__title reveal reveal-up" data-lang="investment_title"></h2>
-          <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="investment_subtitle"></p>
+          <p class="section__desc reveal reveal-up" data-lang="investment_subtitle"></p>
         </div>
-        <div class="investment-body">
-          <div class="investment-grid stagger-children reveal">
-            <div class="investment-card glass-card">
-              <img src="assets/icons/investment-pos.svg" alt="" class="investment-card__icon" width="40" height="40">
-              <h3 data-lang="investment_pos_title"></h3>
-              <p class="investment-card__main" data-lang="investment_pos_desc"></p>
-              <p class="investment-card__note" data-lang="investment_pos_note"></p>
-            </div>
-            <div class="investment-card glass-card">
-              <img src="assets/icons/investment-infra.svg" alt="" class="investment-card__icon" width="40" height="40">
-              <h3 data-lang="investment_infra_title"></h3>
-              <p class="investment-card__main" data-lang="investment_infra_desc"></p>
-              <p class="investment-card__note" data-lang="investment_infra_note"></p>
-            </div>
-            <div class="investment-card glass-card">
-              <img src="assets/icons/investment-modules.svg" alt="" class="investment-card__icon" width="40" height="40">
-              <h3 data-lang="investment_modules_title"></h3>
-              <p class="investment-card__main" data-lang="investment_modules_desc"></p>
-              <p class="investment-card__note" data-lang="investment_modules_note"></p>
-            </div>
+        <div class="section-visual section-visual--investment reveal scale-in">
+          <img src="assets/images/investment.webp" alt="" class="section-visual__img section-visual__img--investment" width="960" height="540" loading="lazy" decoding="async">
+        </div>
+        <div class="investment-grid stagger-children reveal">
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-pos.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_pos_title"></h3>
+            <p class="investment-card__main" data-lang="investment_pos_desc"></p>
+            <p class="investment-card__note" data-lang="investment_pos_note"></p>
           </div>
-          <div class="section-visual section-visual--investment reveal scale-in">
-            <img src="assets/images/investment.webp" alt="" class="section-visual__img section-visual__img--investment" width="960" height="540" loading="lazy" decoding="async">
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-infra.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_infra_title"></h3>
+            <p class="investment-card__main" data-lang="investment_infra_desc"></p>
+            <p class="investment-card__note" data-lang="investment_infra_note"></p>
+          </div>
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-modules.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_modules_title"></h3>
+            <p class="investment-card__main" data-lang="investment_modules_desc"></p>
+            <p class="investment-card__note" data-lang="investment_modules_note"></p>
           </div>
         </div>
         <p class="investment-footer reveal reveal-up" data-lang="investment_footer"></p>
@@ -456,8 +455,8 @@
 
     <!-- SECTION 13: PHASES -->
     <section class="section section--white fp-section" data-anchor="phases">
-      <div class="section__inner section__inner--fit">
-        <div class="section__text section__text--center section__text--compact">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
           <h2 class="section__title reveal reveal-up" data-lang="phases_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="phases_subtitle"></p>
         </div>
@@ -496,8 +495,8 @@
 
     <!-- SECTION 14: COMPARE -->
     <section class="section section--dark fp-section" data-anchor="compare">
-      <div class="section__inner section__inner--fit">
-        <div class="section__text section__text--center section__text--light section__text--compact">
+      <div class="section__inner">
+        <div class="section__text section__text--center section__text--light">
           <h2 class="section__title reveal reveal-up" data-lang="compare_title"></h2>
         </div>
         <div class="compare-grid reveal scale-in">
@@ -534,8 +533,8 @@
     <!-- SECTION 15: FUTURE (dark gradient) -->
     <section class="section section--future fp-section" data-anchor="future">
       <div class="future__particles" aria-hidden="true"></div>
-      <div class="section__inner section__inner--split section__inner--fit">
-        <div class="section__text section__text--light section__text--compact">
+      <div class="section__inner section__inner--split">
+        <div class="section__text section__text--light">
           <h2 class="section__title reveal reveal-up" data-lang="future_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="future_subtitle"></p>
           <div class="future-tags reveal reveal-up">
@@ -561,7 +560,7 @@
 
     <!-- SECTION 16: FINAL -->
     <section class="section section--final fp-section" data-anchor="final">
-      <div class="section__inner section__inner--final section__inner--fit">
+      <div class="section__inner section__inner--final">
         <svg class="final-line draw-line" viewBox="0 0 200 4" aria-hidden="true">
           <line x1="0" y1="2" x2="200" y2="2" stroke="#D4AF37" stroke-width="2"/>
         </svg>
