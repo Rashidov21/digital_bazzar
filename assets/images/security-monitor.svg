@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <rect width="800" height="560" rx="20" fill="#111"/>
+  <!-- Camera grid overlay -->
+  <g stroke="#2563EB" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="140" x2="800" y2="140"/><line x1="0" y1="280" x2="800" y2="280"/>
+    <line x1="0" y1="420" x2="800" y2="420"/><line x1="200" y1="0" x2="200" y2="560"/>
+    <line x1="400" y1="0" x2="400" y2="560"/><line x1="600" y1="0" x2="600" y2="560"/>
+  </g>
+  <!-- Market floor plan simplified -->
+  <rect x="100" y="120" width="600" height="320" rx="8" fill="#1a1a2e" stroke="#333" stroke-width="2"/>
+  <g fill="#252540" stroke="#444" stroke-width="1">
+    <rect x="120" y="140" width="80" height="60" rx="3"/>
+    <rect x="220" y="140" width="80" height="60" rx="3"/>
+    <rect x="320" y="140" width="80" height="60" rx="3"/>
+    <rect x="420" y="140" width="80" height="60" rx="3"/>
+    <rect x="520" y="140" width="80" height="60" rx="3"/>
+    <rect x="120" y="220" width="120" height="80" rx="3"/>
+    <rect x="260" y="220" width="120" height="80" rx="3"/>
+    <rect x="400" y="220" width="120" height="80" rx="3"/>
+    <rect x="540" y="220" width="80" height="80" rx="3"/>
+    <rect x="120" y="320" width="500" height="100" rx="3"/>
+  </g>
+  <!-- Cameras -->
+  <g>
+    <circle cx="130" cy="130" r="16" fill="#0B2D5B" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="130" cy="130" r="6" fill="#fff"/>
+    <circle cx="670" cy="130" r="16" fill="#0B2D5B" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="670" cy="130" r="6" fill="#fff"/>
+    <circle cx="130" cy="430" r="16" fill="#0B2D5B" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="670" cy="430" r="16" fill="#0B2D5B" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="400" cy="110" r="16" fill="#0B2D5B" stroke="#D4AF37" stroke-width="2"/>
+  </g>
+  <!-- View cones -->
+  <path d="M130 146 L100 200 L160 200 Z" fill="#2563EB" opacity="0.15"/>
+  <path d="M670 146 L640 200 L700 200 Z" fill="#2563EB" opacity="0.15"/>
+  <!-- REC indicator -->
+  <circle cx="720" cy="40" r="8" fill="#E74C3C"/>
+  <text x="700" y="44" fill="#E74C3C" font-size="12" font-weight="700" font-family="Inter,sans-serif">REC</text>
+  <!-- Alert pulse -->
+  <circle cx="400" cy="280" r="20" fill="#E74C3C" opacity="0.2"/>
+  <circle cx="400" cy="280" r="10" fill="#E74C3C" opacity="0.5"/>
+</svg>

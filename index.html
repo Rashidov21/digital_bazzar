@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Өзгөн базары — Hansoft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fullpage.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Persistent partner badge on every slide -->
+  <div class="global-partner-badge" data-lang="global_partner_badge"></div>
+
+  <!-- Hover zone to reveal hidden header -->
+  <div class="header-trigger-zone" aria-hidden="true"></div>
+
+  <!-- Fixed presentation header (auto-hide) -->
+  <header class="presentation-header is-visible">
+    <a href="#hero" class="presentation-header__logo">
+      <img src="assets/logos/hansoft-logo.svg" alt="Hansoft" width="140" height="32">
+    </a>
+    <span class="presentation-header__label" data-lang="nav_presentation"></span>
+    <div class="lang-switch">
+      <button class="lang-switch__btn is-active" data-lang-switch="kg" type="button">
+        <span class="lang-switch__flag">🇰🇬</span>
+        <span data-lang="lang_kg"></span>
+      </button>
+      <span class="lang-switch__divider">|</span>
+      <button class="lang-switch__btn" data-lang-switch="ru" type="button">
+        <span class="lang-switch__flag">🇷🇺</span>
+        <span data-lang="lang_ru"></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="fullpage">
+
+    <!-- SECTION 1: HERO -->
+    <section class="section section--hero fp-section" data-anchor="hero">
+      <!--
+      Prompt: Ultra realistic aerial drone view of a luxury modern marketplace
+      in Kyrgyzstan, Uzgen region, clean architecture, snow-capped mountains
+      in background, golden hour cinematic lighting, 8K, photorealistic
+      -->
+      <div class="hero__bg parallax-bg">
+        <img src="assets/images/hero-market.svg" alt="" class="hero__bg-img">
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="section__inner hero__content">
+        <div class="hero__partner reveal reveal-up">
+          <img src="assets/logos/aig-logo.png" alt="AIG" class="hero__partner-logo" width="36" height="36">
+          <span data-lang="hero_partner"></span>
+        </div>
+        <h1 class="hero__title reveal reveal-blur" data-lang="hero_title"></h1>
+        <p class="hero__subtitle reveal reveal-up" data-lang="hero_subtitle"></p>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: VISION -->
+    <section class="section section--cream fp-section" data-anchor="vision">
+      <div class="section__inner">
+        <div class="section__text">
+          <h2 class="section__title reveal reveal-up" data-lang="vision_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="vision_subtitle"></p>
+        </div>
+        <div class="vision-grid stagger-children reveal">
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-org.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_org"></h3>
+            <p data-lang="vision_org_desc"></p>
+          </div>
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-comfort.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_comfort"></h3>
+            <p data-lang="vision_comfort_desc"></p>
+          </div>
+          <div class="vision-card glass-card">
+            <div class="vision-card__icon">
+              <img src="assets/icons/vision-growth.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="vision_growth"></h3>
+            <p data-lang="vision_growth_desc"></p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TRUST / WHY HANSOFT -->
+    <section class="section section--white fp-section" data-anchor="trust">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
+          <h2 class="section__title reveal reveal-up" data-lang="trust_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="trust_subtitle"></p>
+        </div>
+        <div class="trust-grid stagger-children reveal">
+          <div class="trust-card glass-card">
+            <img src="assets/icons/trust-exp.svg" alt="" class="trust-card__icon" width="48" height="48">
+            <span class="trust-card__number">7</span>
+            <h3 data-lang="trust_exp_title"></h3>
+            <p data-lang="trust_exp_desc"></p>
+          </div>
+          <div class="trust-card glass-card">
+            <img src="assets/icons/trust-prog.svg" alt="" class="trust-card__icon" width="48" height="48">
+            <span class="trust-card__number">12</span>
+            <h3 data-lang="trust_prog_title"></h3>
+            <p data-lang="trust_prog_desc"></p>
+          </div>
+          <div class="trust-card glass-card">
+            <img src="assets/icons/trust-sectors.svg" alt="" class="trust-card__icon" width="48" height="48">
+            <span class="trust-card__number">8+</span>
+            <h3 data-lang="trust_sectors_title"></h3>
+            <p data-lang="trust_sectors_desc"></p>
+          </div>
+          <div class="trust-card glass-card">
+            <img src="assets/icons/trust-deploy.svg" alt="" class="trust-card__icon" width="48" height="48">
+            <span class="trust-card__number">1–3</span>
+            <h3 data-lang="trust_deploy_title"></h3>
+            <p data-lang="trust_deploy_desc"></p>
+          </div>
+        </div>
+        <p class="trust-footer reveal reveal-up" data-lang="trust_footer"></p>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ECOSYSTEM -->
+    <section class="section section--white fp-section" data-anchor="ecosystem">
+      <div class="section__inner section__inner--split">
+        <div class="section__text">
+          <h2 class="section__title reveal reveal-up" data-lang="ecosystem_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="ecosystem_subtitle"></p>
+          <ul class="eco-products reveal reveal-up">
+            <li><strong data-lang="eco_shops"></strong> — <span data-lang="eco_shops_note"></span></li>
+            <li><strong data-lang="eco_parking"></strong> — <span data-lang="eco_parking_note"></span></li>
+            <li><strong data-lang="eco_security"></strong> — <span data-lang="eco_security_note"></span></li>
+            <li><strong data-lang="eco_payments"></strong> — <span data-lang="eco_payments_note"></span></li>
+            <li><strong data-lang="eco_management"></strong> — <span data-lang="eco_management_note"></span></li>
+          </ul>
+        </div>
+        <div class="ecosystem-diagram reveal scale-in">
+          <img src="assets/images/ecosystem.svg" alt="" class="ecosystem-svg">
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SHOPS -->
+    <section class="section section--cream fp-section" data-anchor="shops">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
+          <h2 class="section__title reveal reveal-up" data-lang="shops_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="shops_subtitle"></p>
+        </div>
+        <div class="shops-grid stagger-children reveal">
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-receipt.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_receipt_title"></h3>
+            <p data-lang="shop_receipt_desc"></p>
+          </div>
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-sales.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_sales_title"></h3>
+            <p data-lang="shop_sales_desc"></p>
+          </div>
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-inventory.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_inventory_title"></h3>
+            <p data-lang="shop_inventory_desc"></p>
+          </div>
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-reports.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_reports_title"></h3>
+            <p data-lang="shop_reports_desc"></p>
+          </div>
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-phone.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_phone_title"></h3>
+            <p data-lang="shop_phone_desc"></p>
+          </div>
+          <div class="shop-card glass-card">
+            <img src="assets/icons/shop-manage.svg" alt="" class="shop-card__icon" width="48" height="48">
+            <h3 data-lang="shop_manage_title"></h3>
+            <p data-lang="shop_manage_desc"></p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTROL (dark) -->
+    <section class="section section--dark fp-section" data-anchor="control">
+      <div class="section__inner section__inner--split">
+        <div class="section__text section__text--light">
+          <h2 class="section__title reveal reveal-up" data-lang="control_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="control_subtitle"></p>
+          <p class="control-disclaimer reveal reveal-up" data-lang="control_disclaimer"></p>
+          <p class="control-tag reveal reveal-up" data-lang="control_from_anywhere"></p>
+        </div>
+        <div class="phone-mockup float reveal scale-in">
+          <div class="phone-mockup__frame">
+            <div class="phone-mockup__screen">
+              <div class="phone-stat">
+                <span class="phone-stat__label" data-lang="control_income"></span>
+                <span class="phone-stat__value phone-stat__value--demo">XXX <small>сом</small></span>
+              </div>
+              <div class="phone-stat">
+                <span class="phone-stat__label" data-lang="control_rent"></span>
+                <span class="phone-stat__value phone-stat__value--demo">XXX <small>сом</small></span>
+              </div>
+              <div class="phone-stat-row">
+                <div class="phone-stat phone-stat--small">
+                  <span class="phone-stat__label" data-lang="control_occupied"></span>
+                  <span class="phone-stat__value phone-stat__value--demo">—</span>
+                </div>
+                <div class="phone-stat phone-stat--small">
+                  <span class="phone-stat__label" data-lang="control_free"></span>
+                  <span class="phone-stat__value phone-stat__value--demo phone-stat__value--accent">—</span>
+                </div>
+              </div>
+              <div class="phone-stat">
+                <span class="phone-stat__label" data-lang="control_reports"></span>
+                <div class="phone-chart">
+                  <div class="phone-chart__bar" style="height: 45%"></div>
+                  <div class="phone-chart__bar" style="height: 70%"></div>
+                  <div class="phone-chart__bar" style="height: 55%"></div>
+                  <div class="phone-chart__bar" style="height: 90%"></div>
+                  <div class="phone-chart__bar" style="height: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--dark">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PARKING -->
+    <section class="section section--white fp-section" data-anchor="parking">
+      <div class="section__inner section__inner--split section__inner--reverse">
+        <div class="section__text">
+          <h2 class="section__title reveal reveal-up" data-lang="parking_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="parking_subtitle"></p>
+          <div class="feature-list stagger-children reveal">
+            <div class="feature-item">
+              <strong data-lang="parking_traffic"></strong>
+              <span data-lang="parking_traffic_desc"></span>
+            </div>
+            <div class="feature-item">
+              <strong data-lang="parking_manage"></strong>
+              <span data-lang="parking_manage_desc"></span>
+            </div>
+            <div class="feature-item">
+              <strong data-lang="parking_entry"></strong>
+              <span data-lang="parking_entry_desc"></span>
+            </div>
+            <div class="feature-item">
+              <strong data-lang="parking_exit"></strong>
+              <span data-lang="parking_exit_desc"></span>
+            </div>
+          </div>
+        </div>
+        <div class="section-visual reveal scale-in">
+          <!--
+          Prompt: Modern organized parking lot at a premium marketplace,
+          clean lines, green landscaping, cars neatly parked, aerial perspective,
+          soft daylight, architectural visualization
+          -->
+          <img src="assets/images/parking.svg" alt="" class="section-visual__img">
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SECURITY (dark) -->
+    <section class="section section--dark fp-section" data-anchor="security">
+      <div class="section__inner">
+        <div class="section__text section__text--center section__text--light">
+          <h2 class="section__title reveal reveal-up" data-lang="security_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="security_subtitle"></p>
+        </div>
+        <div class="security-grid stagger-children reveal">
+          <div class="security-card">
+            <div class="security-card__icon">
+              <img src="assets/icons/security-camera.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="security_camera"></h3>
+            <p data-lang="security_camera_desc"></p>
+            <span class="security-pulse"></span>
+          </div>
+          <div class="security-card">
+            <div class="security-card__icon">
+              <img src="assets/icons/security-alert.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="security_alert"></h3>
+            <p data-lang="security_alert_desc"></p>
+          </div>
+          <div class="security-card">
+            <div class="security-card__icon">
+              <img src="assets/icons/security-shield.svg" alt="" width="48" height="48">
+            </div>
+            <h3 data-lang="security_safe"></h3>
+            <p data-lang="security_safe_desc"></p>
+          </div>
+        </div>
+        <div class="security-visual reveal scale-in">
+          <img src="assets/images/security-monitor.svg" alt="" class="security-visual__img">
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--dark">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: NAVIGATION -->
+    <section class="section section--white fp-section" data-anchor="navigation">
+      <div class="section__inner section__inner--split">
+        <div class="section__text">
+          <h2 class="section__title reveal reveal-up" data-lang="navigation_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="navigation_subtitle"></p>
+        </div>
+        <div class="map-mockup reveal scale-in">
+          <img src="assets/images/map.svg" alt="" class="map-svg">
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: ADVERTISING -->
+    <section class="section section--cream fp-section" data-anchor="advertising">
+      <div class="section__inner section__inner--split section__inner--reverse">
+        <div class="section__text">
+          <h2 class="section__title reveal reveal-up" data-lang="advertising_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="advertising_subtitle"></p>
+          <div class="feature-list stagger-children reveal">
+            <div class="feature-item">
+              <strong data-lang="advertising_led"></strong>
+              <span data-lang="advertising_led_desc"></span>
+            </div>
+            <div class="feature-item">
+              <strong data-lang="advertising_screens"></strong>
+              <span data-lang="advertising_screens_desc"></span>
+            </div>
+            <div class="feature-item">
+              <strong data-lang="advertising_income"></strong>
+              <span data-lang="advertising_income_desc"></span>
+            </div>
+          </div>
+        </div>
+        <div class="led-visual reveal scale-in">
+          <!--
+          Prompt: Large LED advertising screens at a modern marketplace entrance,
+          vibrant display, premium architecture, evening golden light
+          -->
+          <img src="assets/images/advertising.svg" alt="" class="section-visual__img">
+          <div class="led-glow"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: TOURISTS -->
+    <section class="section section--white fp-section" data-anchor="tourists">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
+          <h2 class="section__title reveal reveal-up" data-lang="tourists_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="tourists_subtitle"></p>
+        </div>
+        <div class="tourists-grid stagger-children reveal">
+          <div class="tourist-card glass-card">
+            <img src="assets/icons/tourists-qr.svg" alt="" class="tourist-card__icon" width="64" height="64">
+            <h3 data-lang="tourists_qr"></h3>
+            <p data-lang="tourists_qr_desc"></p>
+          </div>
+          <div class="tourist-card glass-card">
+            <img src="assets/icons/tourists-lang.svg" alt="" class="tourist-card__icon" width="64" height="64">
+            <h3 data-lang="tourists_lang"></h3>
+            <p data-lang="tourists_lang_desc"></p>
+          </div>
+          <div class="tourist-card glass-card">
+            <img src="assets/icons/tourists-nav.svg" alt="" class="tourist-card__icon" width="64" height="64">
+            <h3 data-lang="tourists_nav"></h3>
+            <p data-lang="tourists_nav_desc"></p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: INVESTMENT -->
+    <section class="section section--cream fp-section" data-anchor="investment">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
+          <h2 class="section__title reveal reveal-up" data-lang="investment_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="investment_subtitle"></p>
+        </div>
+        <div class="investment-grid stagger-children reveal">
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-pos.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_pos_title"></h3>
+            <p class="investment-card__main" data-lang="investment_pos_desc"></p>
+            <p class="investment-card__note" data-lang="investment_pos_note"></p>
+          </div>
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-infra.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_infra_title"></h3>
+            <p class="investment-card__main" data-lang="investment_infra_desc"></p>
+            <p class="investment-card__note" data-lang="investment_infra_note"></p>
+          </div>
+          <div class="investment-card glass-card">
+            <img src="assets/icons/investment-modules.svg" alt="" class="investment-card__icon" width="48" height="48">
+            <h3 data-lang="investment_modules_title"></h3>
+            <p class="investment-card__main" data-lang="investment_modules_desc"></p>
+            <p class="investment-card__note" data-lang="investment_modules_note"></p>
+          </div>
+        </div>
+        <p class="investment-footer reveal reveal-up" data-lang="investment_footer"></p>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: PHASES -->
+    <section class="section section--white fp-section" data-anchor="phases">
+      <div class="section__inner">
+        <div class="section__text section__text--center">
+          <h2 class="section__title reveal reveal-up" data-lang="phases_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="phases_subtitle"></p>
+        </div>
+        <div class="timeline stagger-children reveal">
+          <div class="timeline__item">
+            <img src="assets/icons/phases-1.svg" alt="" class="timeline__icon" width="48" height="48">
+            <span class="timeline__period" data-lang="phases_1_period"></span>
+            <div class="timeline__content glass-card">
+              <h3 data-lang="phases_1_title"></h3>
+              <p data-lang="phases_1_desc"></p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <img src="assets/icons/phases-2.svg" alt="" class="timeline__icon" width="48" height="48">
+            <span class="timeline__period" data-lang="phases_2_period"></span>
+            <div class="timeline__content glass-card">
+              <h3 data-lang="phases_2_title"></h3>
+              <p data-lang="phases_2_desc"></p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <img src="assets/icons/phases-3.svg" alt="" class="timeline__icon" width="48" height="48">
+            <span class="timeline__period" data-lang="phases_3_period"></span>
+            <div class="timeline__content glass-card">
+              <h3 data-lang="phases_3_title"></h3>
+              <p data-lang="phases_3_desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--light">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: COMPARE -->
+    <section class="section section--dark fp-section" data-anchor="compare">
+      <div class="section__inner">
+        <div class="section__text section__text--center section__text--light">
+          <h2 class="section__title reveal reveal-up" data-lang="compare_title"></h2>
+        </div>
+        <div class="compare-grid reveal scale-in">
+          <div class="compare-col compare-col--without">
+            <img src="assets/icons/compare-without.svg" alt="" class="compare-col__icon" width="40" height="40">
+            <h3 data-lang="compare_without_title"></h3>
+            <ul>
+              <li data-lang="compare_without_1"></li>
+              <li data-lang="compare_without_2"></li>
+              <li data-lang="compare_without_3"></li>
+              <li data-lang="compare_without_4"></li>
+              <li data-lang="compare_without_5"></li>
+            </ul>
+          </div>
+          <div class="compare-col compare-col--with">
+            <img src="assets/icons/compare-with.svg" alt="" class="compare-col__icon" width="40" height="40">
+            <h3 data-lang="compare_with_title"></h3>
+            <ul>
+              <li data-lang="compare_with_1"></li>
+              <li data-lang="compare_with_2"></li>
+              <li data-lang="compare_with_3"></li>
+              <li data-lang="compare_with_4"></li>
+              <li data-lang="compare_with_5"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--dark">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 15: FUTURE (dark gradient) -->
+    <section class="section section--future fp-section" data-anchor="future">
+      <div class="future__particles" aria-hidden="true"></div>
+      <div class="section__inner section__inner--split">
+        <div class="section__text section__text--light">
+          <h2 class="section__title reveal reveal-up" data-lang="future_title"></h2>
+          <p class="section__desc reveal reveal-up" data-lang="future_subtitle"></p>
+          <div class="future-tags reveal reveal-up">
+            <span class="future-tag" data-lang="future_any"></span>
+            <span class="future-tag" data-lang="future_ready"></span>
+            <span class="future-tag future-tag--gold" data-lang="future_partner"></span>
+          </div>
+        </div>
+        <div class="section-visual reveal scale-in">
+          <!--
+          Prompt: Futuristic smart marketplace concept, holographic elements,
+          clean modern architecture in Kyrgyzstan, night scene with subtle blue
+          and gold lighting, cinematic 8K visualization
+          -->
+          <img src="assets/images/future.svg" alt="" class="section-visual__img section-visual__img--glow">
+        </div>
+      </div>
+      <div class="scroll-indicator scroll-indicator--dark">
+        <span class="scroll-indicator__text" data-lang="scroll_hint"></span>
+        <div class="scroll-indicator__chevron"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 16: FINAL -->
+    <section class="section section--final fp-section" data-anchor="final">
+      <div class="section__inner section__inner--final">
+        <svg class="final-line draw-line" viewBox="0 0 200 4" aria-hidden="true">
+          <line x1="0" y1="2" x2="200" y2="2" stroke="#D4AF37" stroke-width="2"/>
+        </svg>
+        <h2 class="final__title reveal reveal-blur" data-lang="cta_title"></h2>
+        <p class="final__subtitle reveal reveal-up" data-lang="cta_subtitle"></p>
+        <div class="final__actions reveal scale-in">
+          <a href="https://hansoft.kg" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-lang="cta_demo"></a>
+          <a href="https://hansoft.kg" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" data-lang="cta_consult"></a>
+        </div>
+        <div class="partnership-lockup reveal scale-in">
+          <div class="partnership-lockup__item">
+            <img src="assets/logos/hansoft-logo.svg" alt="Hansoft" width="160" height="36">
+            <span data-lang="cta_tech_label"></span>
+          </div>
+          <div class="partnership-lockup__divider"></div>
+          <div class="partnership-lockup__item">
+            <img src="assets/logos/aig-logo.png" alt="AIG" width="36" height="36">
+            <span data-lang="cta_partner_label"></span>
+          </div>
+        </div>
+        <div class="final__contact reveal reveal-up">
+          <span class="final__contact-item">hansoft.kg</span>
+          <span class="final__contact-divider">·</span>
+          <span class="final__contact-item" data-lang="cta_phone"></span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Presentation slide counter -->
+  <div class="slide-counter" aria-hidden="true">
+    <span class="slide-counter__current">01</span>
+    <span class="slide-counter__sep">/</span>
+    <span class="slide-counter__total">16</span>
+  </div>
+
+  <script src="js/fullpage.min.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

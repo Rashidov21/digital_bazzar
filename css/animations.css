@@ -1,0 +1,127 @@
+/* ============================================
+   Presentation Animations
+   ============================================ */
+
+/* ---- Reveal Base ---- */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+}
+
+/* ---- Reveal Up ---- */
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-up.is-visible {
+  transform: translateY(0);
+}
+
+/* ---- Reveal Blur ---- */
+.reveal-blur {
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+.reveal-blur.is-visible {
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* ---- Scale In ---- */
+.scale-in {
+  transform: scale(0.92);
+}
+
+.scale-in.is-visible {
+  transform: scale(1);
+}
+
+/* ---- Stagger Children ---- */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+
+/* ---- Float ---- */
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float.is-visible,
+.is-visible.float {
+  animation: floatVisible 4s ease-in-out infinite;
+}
+
+@keyframes floatVisible {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1) translateY(-12px); }
+}
+
+/* ---- Parallax Background ---- */
+.parallax-bg {
+  will-change: transform;
+}
+
+/* ---- Draw Line ---- */
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+.draw-line line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.draw-line.is-visible line {
+  animation: drawLine 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ---- Section Enter (Fullpage afterLoad) ---- */
+.section.is-active .reveal:not(.is-visible) {
+  /* triggered by JS adding is-visible */
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-up,
+  .reveal-blur,
+  .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .float,
+  .float.is-visible {
+    animation: none !important;
+  }
+}
