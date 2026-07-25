@@ -372,6 +372,7 @@ img, svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
   animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
@@ -446,6 +447,14 @@ img, svg {
 }
 
 /* ---- VISION ---- */
+.vision-top {
+  margin-bottom: clamp(8px, 2vh, 24px);
+}
+
+.vision-top .section__desc {
+  max-width: none;
+}
+
 .vision-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -471,9 +480,10 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-navy), var(--color-aig-blue));
+  background: linear-gradient(145deg, rgba(11, 45, 91, 0.08), rgba(37, 99, 235, 0.06));
+  border: 1px solid rgba(11, 45, 91, 0.1);
   border-radius: 20px;
-  color: #fff;
+  box-shadow: 0 4px 16px rgba(11, 45, 91, 0.08);
 }
 
 .vision-card h3 {
@@ -499,8 +509,9 @@ img, svg {
 
 .ecosystem-svg {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   height: auto;
+  filter: drop-shadow(0 12px 32px rgba(11, 45, 91, 0.12));
 }
 
 .eco-line {
@@ -574,10 +585,17 @@ img, svg {
 
 .phone-mockup__frame {
   width: clamp(260px, 22vw, 320px);
-  padding: 12px;
+  padding: 10px;
   background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
   border-radius: 40px;
   box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.phone-mockup__screen-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
 }
 
 .phone-mockup__screen {
@@ -681,6 +699,46 @@ img, svg {
   box-shadow: var(--shadow-medium);
 }
 
+.section-visual--banner {
+  margin: clamp(16px, 3vh, 32px) auto clamp(8px, 2vh, 16px);
+  max-width: 960px;
+}
+
+.section-visual__img--banner {
+  max-height: clamp(140px, 22vh, 220px);
+  object-fit: cover;
+  object-position: center 40%;
+  box-shadow: var(--shadow-soft);
+}
+
+.section-visual--investment {
+  max-width: 720px;
+  margin: 0 auto clamp(16px, 3vh, 32px);
+}
+
+.section-visual__img--investment {
+  box-shadow: var(--shadow-soft);
+}
+
+.shops-panel {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vh, 28px);
+}
+
+.shops-panel .section__text {
+  margin-bottom: 0;
+}
+
+.section__inner--split .shops-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0;
+}
+
+.section__inner--split .section-visual {
+  align-self: center;
+}
+
 .section-visual__img--glow {
   box-shadow: 0 0 60px rgba(37, 99, 235, 0.2), var(--shadow-medium);
 }
@@ -726,9 +784,20 @@ img, svg {
 
 .security-visual__img {
   width: 100%;
-  max-width: 720px;
+  max-width: 880px;
+  max-height: 36vh;
+  object-fit: cover;
+  object-position: center top;
   border-radius: var(--radius-lg);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.section[data-anchor="security"] .security-grid {
+  margin-top: clamp(20px, 3vh, 40px);
+}
+
+.section[data-anchor="security"] .security-card {
+  padding: clamp(20px, 2.5vw, 36px);
 }
 
 .security-card h3 {
@@ -769,7 +838,7 @@ img, svg {
 
 .map-svg {
   width: 100%;
-  max-width: 420px;
+  max-width: 480px;
   height: auto;
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-lg);
@@ -824,6 +893,11 @@ img, svg {
   height: 64px;
   margin: 0 auto;
   display: block;
+  padding: 12px;
+  background: rgba(11, 45, 91, 0.06);
+  border: 1px solid rgba(11, 45, 91, 0.08);
+  border-radius: 18px;
+  box-sizing: content-box;
 }
 
 .tourist-card h3 {
@@ -1043,6 +1117,11 @@ img, svg {
   height: 48px;
   margin: 0 auto 12px;
   display: block;
+  padding: 10px;
+  background: rgba(11, 45, 91, 0.06);
+  border: 1px solid rgba(11, 45, 91, 0.08);
+  border-radius: 14px;
+  box-sizing: content-box;
 }
 
 .trust-card__number {
@@ -1104,6 +1183,11 @@ img, svg {
   width: 48px;
   height: 48px;
   margin-bottom: 8px;
+  padding: 10px;
+  background: rgba(11, 45, 91, 0.06);
+  border: 1px solid rgba(11, 45, 91, 0.08);
+  border-radius: 14px;
+  box-sizing: content-box;
 }
 
 .shop-card h3 {
@@ -1156,6 +1240,11 @@ img, svg {
   height: 48px;
   margin-bottom: 16px;
   display: block;
+  padding: 10px;
+  background: rgba(11, 45, 91, 0.06);
+  border: 1px solid rgba(11, 45, 91, 0.08);
+  border-radius: 14px;
+  box-sizing: content-box;
 }
 
 .investment-card h3 {
@@ -1396,6 +1485,15 @@ img, svg {
   .section__inner--reverse .section-visual,
   .section__inner--reverse .led-visual { order: unset; }
 
+  .section__inner--split .shops-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+
+  .section-visual__img--banner {
+    max-height: 180px;
+  }
+
   .vision-grid,
   .security-grid,
   .tourists-grid,
@@ -1439,7 +1537,8 @@ img, svg {
 }
 
 @media (max-width: 640px) {
-  .shops-grid {
+  .shops-grid,
+  .section__inner--split .shops-grid {
     grid-template-columns: 1fr;
   }
 
