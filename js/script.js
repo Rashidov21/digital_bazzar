@@ -134,24 +134,6 @@
     updateHeaderVisibility("hero");
   }
 
-  function preloadSectionImages(sectionEl) {
-    if (!sectionEl) return;
-    sectionEl.querySelectorAll("img[loading='lazy']").forEach((img) => {
-      if (img.complete) return;
-      const loader = new Image();
-      loader.src = img.currentSrc || img.src;
-    });
-  }
-
-  function preloadNearbySlides(index) {
-    const sections = document.querySelectorAll("#fullpage .fp-section");
-    [index - 1, index + 1, index + 2].forEach((i) => {
-      if (i >= 0 && i < sections.length) {
-        preloadSectionImages(sections[i]);
-      }
-    });
-  }
-
   function initFullpage() {
     fullpageInstance = new fullpage("#fullpage", {
       licenseKey: "gplv3-license",
@@ -169,8 +151,14 @@
         updateSlideCounter(destination.index);
         updateHeaderVisibility(anchor);
         triggerSectionAnimations(destination.item);
+<<<<<<< HEAD
         preloadSectionImages(destination.item);
         preloadNearbySlides(destination.index);
+=======
+        showHeader();
+        clearTimeout(window._headerHideTimer);
+        window._headerHideTimer = setTimeout(hideHeader, 2500);
+>>>>>>> parent of c0a1f48 (up)
       },
       onLeave: function (origin) {
         resetSectionAnimations(origin.item);
@@ -180,11 +168,16 @@
     const firstSection = document.querySelector(".fp-section.active");
     if (firstSection) {
       updateSlideCounter(0);
+<<<<<<< HEAD
       updateHeaderVisibility("hero");
       setTimeout(() => {
         triggerSectionAnimations(firstSection);
         preloadNearbySlides(0);
       }, 300);
+=======
+      updateHeaderTheme("hero");
+      setTimeout(() => triggerSectionAnimations(firstSection), 300);
+>>>>>>> parent of c0a1f48 (up)
     }
   }
 
