@@ -10,11 +10,25 @@
   <link rel="stylesheet" href="css/fullpage.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="preload" as="image" href="assets/images/hero-market.webp" fetchpriority="high">
 </head>
 <body>
 
   <!-- Persistent partner badge on every slide -->
   <div class="global-partner-badge" data-lang="global_partner_badge"></div>
+
+  <!-- Language switch — always visible -->
+  <div class="lang-switch lang-switch--fixed" aria-label="Language">
+    <button class="lang-switch__btn is-active" data-lang-switch="kg" type="button">
+      <span class="lang-switch__flag">🇰🇬</span>
+      <span data-lang="lang_kg"></span>
+    </button>
+    <span class="lang-switch__divider">|</span>
+    <button class="lang-switch__btn" data-lang-switch="ru" type="button">
+      <span class="lang-switch__flag">🇷🇺</span>
+      <span data-lang="lang_ru"></span>
+    </button>
+  </div>
 
   <!-- Hover zone to reveal hidden header -->
   <div class="header-trigger-zone" aria-hidden="true"></div>
@@ -25,17 +39,6 @@
       <img src="assets/logos/hansoft-logo.svg" alt="Hansoft" width="140" height="32">
     </a>
     <span class="presentation-header__label" data-lang="nav_presentation"></span>
-    <div class="lang-switch">
-      <button class="lang-switch__btn is-active" data-lang-switch="kg" type="button">
-        <span class="lang-switch__flag">🇰🇬</span>
-        <span data-lang="lang_kg"></span>
-      </button>
-      <span class="lang-switch__divider">|</span>
-      <button class="lang-switch__btn" data-lang-switch="ru" type="button">
-        <span class="lang-switch__flag">🇷🇺</span>
-        <span data-lang="lang_ru"></span>
-      </button>
-    </div>
   </header>
 
   <div id="fullpage">
@@ -48,7 +51,7 @@
       in background, golden hour cinematic lighting, 8K, photorealistic
       -->
       <div class="hero__bg parallax-bg">
-        <img src="assets/ai_images/hero_slayd.png" alt="" class="hero__bg-img">
+        <img src="assets/images/hero-market.webp" alt="" class="hero__bg-img" width="1672" height="941" fetchpriority="high" decoding="async">
       </div>
       <div class="hero__overlay"></div>
       <div class="section__inner hero__content">
@@ -73,7 +76,6 @@
             <h2 class="section__title reveal reveal-up" data-lang="vision_title"></h2>
             <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="vision_subtitle"></p>
           </div>
-<<<<<<< HEAD
           <div class="vision-grid stagger-children reveal">
             <div class="vision-card glass-card">
               <div class="vision-card__icon">
@@ -96,10 +98,6 @@
               <h3 data-lang="vision_growth"></h3>
               <p data-lang="vision_growth_desc"></p>
             </div>
-=======
-          <div class="section-visual reveal scale-in">
-            <img src="assets/ai_images/vision.png" alt="" class="section-visual__img">
->>>>>>> parent of c0a1f48 (up)
           </div>
         </div>
         <div class="section-visual reveal scale-in">
@@ -119,12 +117,6 @@
           <h2 class="section__title reveal reveal-up" data-lang="trust_title"></h2>
           <p class="section__desc reveal reveal-up" data-lang="trust_subtitle"></p>
         </div>
-<<<<<<< HEAD
-=======
-        <div class="section-visual section-visual--banner reveal scale-in">
-          <img src="assets/ai_images/trust.png" alt="" class="section-visual__img section-visual__img--banner">
-        </div>
->>>>>>> parent of c0a1f48 (up)
         <div class="trust-grid stagger-children reveal">
           <div class="trust-card glass-card">
             <img src="assets/icons/trust-exp.svg" alt="" class="trust-card__icon" width="48" height="48">
@@ -174,7 +166,7 @@
           </ul>
         </div>
         <div class="ecosystem-diagram reveal scale-in">
-          <img src="assets/ai_images/ecosystem.png" alt="" class="ecosystem-svg">
+          <img src="assets/images/ecosystem.webp" alt="" class="ecosystem-svg" width="960" height="960" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--light">
@@ -225,7 +217,7 @@
           </div>
         </div>
         <div class="section-visual reveal scale-in">
-          <img src="assets/ai_images/shops.png" alt="" class="section-visual__img">
+          <img src="assets/images/shops.webp" alt="" class="section-visual__img" width="1200" height="900" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--light">
@@ -245,7 +237,7 @@
         </div>
         <div class="phone-mockup float reveal scale-in">
           <div class="phone-mockup__frame">
-            <img src="assets/ai_images/control_mobile_app.jpg" alt="" class="phone-mockup__screen-img">
+            <img src="assets/images/control-app.webp" alt="" class="phone-mockup__screen-img" width="592" height="1280" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -255,7 +247,7 @@
       </div>
     </section>
 
-    <!-- SECTION 6: PARKING -->
+    <!-- SECTION 7: PARKING -->
     <section class="section section--white fp-section" data-anchor="parking">
       <div class="section__inner section__inner--split section__inner--reverse section__inner--fit">
         <div class="section__text section__text--compact">
@@ -286,7 +278,7 @@
           clean lines, green landscaping, cars neatly parked, aerial perspective,
           soft daylight, architectural visualization
           -->
-          <img src="assets/ai_images/parking.png" alt="" class="section-visual__img">
+          <img src="assets/images/parking.webp" alt="" class="section-visual__img" width="1280" height="720" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--light">
@@ -295,7 +287,7 @@
       </div>
     </section>
 
-    <!-- SECTION 7: SECURITY (dark) -->
+    <!-- SECTION 8: SECURITY (dark) -->
     <section class="section section--dark fp-section" data-anchor="security">
       <div class="section__inner section__inner--split section__inner--fit">
         <div class="security-panel">
@@ -329,7 +321,7 @@
           </div>
         </div>
         <div class="security-visual reveal scale-in">
-          <img src="assets/ai_images/security.png" alt="" class="security-visual__img">
+          <img src="assets/images/security-monitor.webp" alt="" class="security-visual__img" width="1280" height="720" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--dark">
@@ -338,7 +330,7 @@
       </div>
     </section>
 
-    <!-- SECTION 8: NAVIGATION -->
+    <!-- SECTION 9: NAVIGATION -->
     <section class="section section--white fp-section" data-anchor="navigation">
       <div class="section__inner section__inner--split section__inner--fit">
         <div class="section__text section__text--compact">
@@ -346,7 +338,7 @@
           <p class="section__desc reveal reveal-up" data-lang="navigation_subtitle"></p>
         </div>
         <div class="map-mockup reveal scale-in">
-          <img src="assets/ai_images/navigation.png" alt="" class="map-svg">
+          <img src="assets/images/map.webp" alt="" class="map-svg" width="960" height="960" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="scroll-indicator scroll-indicator--light">
@@ -355,7 +347,7 @@
       </div>
     </section>
 
-    <!-- SECTION 9: ADVERTISING -->
+    <!-- SECTION 10: ADVERTISING -->
     <section class="section section--cream fp-section" data-anchor="advertising">
       <div class="section__inner section__inner--split section__inner--reverse section__inner--fit">
         <div class="section__text section__text--compact">
@@ -391,7 +383,7 @@
       </div>
     </section>
 
-    <!-- SECTION 10: TOURISTS -->
+    <!-- SECTION 11: TOURISTS -->
     <section class="section section--white fp-section" data-anchor="tourists">
       <div class="section__inner section__inner--fit">
         <div class="section__text section__text--center section__text--compact">
@@ -429,7 +421,6 @@
           <h2 class="section__title reveal reveal-up" data-lang="investment_title"></h2>
           <p class="section__desc section__desc--clamp reveal reveal-up" data-lang="investment_subtitle"></p>
         </div>
-<<<<<<< HEAD
         <div class="investment-body">
           <div class="investment-grid stagger-children reveal">
             <div class="investment-card glass-card">
@@ -450,17 +441,6 @@
               <p class="investment-card__main" data-lang="investment_modules_desc"></p>
               <p class="investment-card__note" data-lang="investment_modules_note"></p>
             </div>
-=======
-        <div class="section-visual section-visual--investment reveal scale-in">
-          <img src="assets/ai_images/investment.png" alt="" class="section-visual__img section-visual__img--investment">
-        </div>
-        <div class="investment-grid stagger-children reveal">
-          <div class="investment-card glass-card">
-            <img src="assets/icons/investment-pos.svg" alt="" class="investment-card__icon" width="48" height="48">
-            <h3 data-lang="investment_pos_title"></h3>
-            <p class="investment-card__main" data-lang="investment_pos_desc"></p>
-            <p class="investment-card__note" data-lang="investment_pos_note"></p>
->>>>>>> parent of c0a1f48 (up)
           </div>
           <div class="section-visual section-visual--investment reveal scale-in">
             <img src="assets/images/investment.webp" alt="" class="section-visual__img section-visual__img--investment" width="960" height="540" loading="lazy" decoding="async">

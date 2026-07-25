@@ -25,8 +25,11 @@
 
   function updateHeaderTheme(anchor) {
     const header = document.querySelector(".presentation-header");
-    if (!header) return;
-    header.classList.toggle("is-dark", DARK_SECTIONS.includes(anchor));
+    const isDark = DARK_SECTIONS.includes(anchor);
+    if (header) {
+      header.classList.toggle("is-dark", isDark);
+    }
+    document.body.classList.toggle("is-dark-slide", isDark);
   }
 
   function triggerSectionAnimations(sectionEl) {
@@ -84,6 +87,31 @@
     } else {
       hideHeader(true);
     }
+  }
+
+  function preloadImage(src) {
+    if (!src) return;
+    const img = new Image();
+    img.decoding = "async";
+    img.src = src;
+  }
+
+  function preloadSectionImages(sectionEl) {
+    if (!sectionEl) return;
+    sectionEl.querySelectorAll("img[src]").forEach((img) => {
+      if (img.loading !== "eager" && !img.complete) {
+        preloadImage(img.getAttribute("src"));
+      }
+    });
+  }
+
+  function preloadNearbySlides(index) {
+    const sections = document.querySelectorAll("#fullpage .fp-section");
+    [index - 1, index + 1].forEach((i) => {
+      if (i >= 0 && i < sections.length) {
+        preloadSectionImages(sections[i]);
+      }
+    });
   }
 
   function initHeaderAutoHide() {
@@ -151,14 +179,8 @@
         updateSlideCounter(destination.index);
         updateHeaderVisibility(anchor);
         triggerSectionAnimations(destination.item);
-<<<<<<< HEAD
         preloadSectionImages(destination.item);
         preloadNearbySlides(destination.index);
-=======
-        showHeader();
-        clearTimeout(window._headerHideTimer);
-        window._headerHideTimer = setTimeout(hideHeader, 2500);
->>>>>>> parent of c0a1f48 (up)
       },
       onLeave: function (origin) {
         resetSectionAnimations(origin.item);
@@ -168,16 +190,11 @@
     const firstSection = document.querySelector(".fp-section.active");
     if (firstSection) {
       updateSlideCounter(0);
-<<<<<<< HEAD
       updateHeaderVisibility("hero");
       setTimeout(() => {
         triggerSectionAnimations(firstSection);
         preloadNearbySlides(0);
       }, 300);
-=======
-      updateHeaderTheme("hero");
-      setTimeout(() => triggerSectionAnimations(firstSection), 300);
->>>>>>> parent of c0a1f48 (up)
     }
   }
 

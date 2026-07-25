@@ -146,20 +146,6 @@ body:not(.is-hero-slide) .presentation-header {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.presentation-header.is-dark .lang-switch {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.presentation-header.is-dark .lang-switch__btn {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.presentation-header.is-dark .lang-switch__btn.is-active {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-
 .presentation-header__logo {
   flex-shrink: 0;
 }
@@ -220,6 +206,36 @@ body:not(.is-hero-slide) .presentation-header {
 .lang-switch__flag {
   font-size: 1rem;
   line-height: 1;
+}
+
+.lang-switch--fixed {
+  position: fixed;
+  top: clamp(12px, 2vh, 20px);
+  right: clamp(24px, 4vw, 64px);
+  z-index: 1001;
+  box-shadow: var(--shadow-soft);
+}
+
+body.is-dark-slide .lang-switch--fixed {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.is-dark-slide .lang-switch--fixed .lang-switch__btn {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+body.is-dark-slide .lang-switch--fixed .lang-switch__btn.is-active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+body.is-dark-slide .lang-switch--fixed .lang-switch__btn:hover:not(.is-active) {
+  color: #fff;
+}
+
+body.is-dark-slide .lang-switch--fixed .lang-switch__divider {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* ---- Slide Counter ---- */
