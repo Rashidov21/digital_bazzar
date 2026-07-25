@@ -23,6 +23,8 @@ PROFILES: dict[str, tuple[int, int, int | None]] = {
     "security.png": (1280, 80, None),
     "navigation.png": (960, 85, None),
     "investment.png": (960, 82, None),
+    "innovations.png": (960, 82, None),
+    "led screend adverstment.png": (1280, 82, None),
 }
 
 OUTPUT_NAMES = {
@@ -36,6 +38,8 @@ OUTPUT_NAMES = {
     "security.png": "security-monitor.webp",
     "navigation.png": "map.webp",
     "investment.png": "investment.webp",
+    "innovations.png": "future.webp",
+    "led screend adverstment.png": "advertising.webp",
 }
 
 

@@ -10,6 +10,7 @@
   const TOTAL_SLIDES = 16;
 
   let fullpageInstance = null;
+  let currentAnchor = "hero";
 
   function padNumber(n) {
     return String(n).padStart(2, "0");
@@ -53,17 +54,36 @@
 
   function showHeader() {
     const header = document.querySelector(".presentation-header");
+    const triggerZone = document.querySelector(".header-trigger-zone");
     if (!header) return;
     header.classList.remove("is-hidden");
     header.classList.add("is-visible");
+    if (triggerZone) triggerZone.classList.remove("is-disabled");
   }
 
-  function hideHeader() {
+  function hideHeader(force) {
     const header = document.querySelector(".presentation-header");
+    const triggerZone = document.querySelector(".header-trigger-zone");
     if (!header) return;
-    if (header.matches(":hover")) return;
+    if (!force && header.matches(":hover")) return;
     header.classList.add("is-hidden");
     header.classList.remove("is-visible");
+    if (triggerZone) triggerZone.classList.add("is-disabled");
+  }
+
+  function updateHeaderVisibility(anchor) {
+    currentAnchor = anchor;
+    updateHeaderTheme(anchor);
+    document.body.classList.toggle("is-hero-slide", anchor === "hero");
+
+    clearTimeout(window._headerHideTimer);
+
+    if (anchor === "hero") {
+      showHeader();
+      window._headerHideTimer = setTimeout(() => hideHeader(false), 2500);
+    } else {
+      hideHeader(true);
+    }
   }
 
   function initHeaderAutoHide() {
@@ -76,16 +96,19 @@
     const TOP_ZONE = 80;
 
     function scheduleHide() {
+      if (currentAnchor !== "hero") return;
       clearTimeout(hideTimer);
-      hideTimer = setTimeout(hideHeader, HIDE_DELAY);
+      hideTimer = setTimeout(() => hideHeader(false), HIDE_DELAY);
     }
 
     function revealHeader() {
+      if (currentAnchor !== "hero") return;
       showHeader();
       scheduleHide();
     }
 
     document.addEventListener("mousemove", (e) => {
+      if (currentAnchor !== "hero") return;
       if (e.clientY <= TOP_ZONE) {
         revealHeader();
       }
@@ -96,6 +119,7 @@
     }
 
     header.addEventListener("mouseenter", () => {
+      if (currentAnchor !== "hero") return;
       clearTimeout(hideTimer);
       showHeader();
     });
@@ -103,10 +127,11 @@
     header.addEventListener("mouseleave", scheduleHide);
 
     document.addEventListener("keydown", () => {
+      if (currentAnchor !== "hero") return;
       revealHeader();
     });
 
-    scheduleHide();
+    updateHeaderVisibility("hero");
   }
 
   function preloadSectionImages(sectionEl) {
@@ -142,13 +167,10 @@
       afterLoad: function (_origin, destination) {
         const anchor = destination.anchor;
         updateSlideCounter(destination.index);
-        updateHeaderTheme(anchor);
+        updateHeaderVisibility(anchor);
         triggerSectionAnimations(destination.item);
         preloadSectionImages(destination.item);
         preloadNearbySlides(destination.index);
-        showHeader();
-        clearTimeout(window._headerHideTimer);
-        window._headerHideTimer = setTimeout(hideHeader, 2500);
       },
       onLeave: function (origin) {
         resetSectionAnimations(origin.item);
@@ -158,7 +180,7 @@
     const firstSection = document.querySelector(".fp-section.active");
     if (firstSection) {
       updateSlideCounter(0);
-      updateHeaderTheme("hero");
+      updateHeaderVisibility("hero");
       setTimeout(() => {
         triggerSectionAnimations(firstSection);
         preloadNearbySlides(0);
