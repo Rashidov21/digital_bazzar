@@ -109,6 +109,24 @@
     scheduleHide();
   }
 
+  function preloadSectionImages(sectionEl) {
+    if (!sectionEl) return;
+    sectionEl.querySelectorAll("img[loading='lazy']").forEach((img) => {
+      if (img.complete) return;
+      const loader = new Image();
+      loader.src = img.currentSrc || img.src;
+    });
+  }
+
+  function preloadNearbySlides(index) {
+    const sections = document.querySelectorAll("#fullpage .fp-section");
+    [index - 1, index + 1, index + 2].forEach((i) => {
+      if (i >= 0 && i < sections.length) {
+        preloadSectionImages(sections[i]);
+      }
+    });
+  }
+
   function initFullpage() {
     fullpageInstance = new fullpage("#fullpage", {
       licenseKey: "gplv3-license",
@@ -126,6 +144,8 @@
         updateSlideCounter(destination.index);
         updateHeaderTheme(anchor);
         triggerSectionAnimations(destination.item);
+        preloadSectionImages(destination.item);
+        preloadNearbySlides(destination.index);
         showHeader();
         clearTimeout(window._headerHideTimer);
         window._headerHideTimer = setTimeout(hideHeader, 2500);
@@ -139,7 +159,10 @@
     if (firstSection) {
       updateSlideCounter(0);
       updateHeaderTheme("hero");
-      setTimeout(() => triggerSectionAnimations(firstSection), 300);
+      setTimeout(() => {
+        triggerSectionAnimations(firstSection);
+        preloadNearbySlides(0);
+      }, 300);
     }
   }
 
